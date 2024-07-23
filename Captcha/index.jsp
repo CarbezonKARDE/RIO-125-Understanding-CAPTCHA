@@ -4,14 +4,23 @@
 <head>
     <title>CAPTCHA</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
         .center-box {
             width: 300px;
-            margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            background-color: #fff;
         }
         .center-box label, .center-box input {
             display: block;
@@ -19,7 +28,18 @@
             margin-bottom: 10px;
         }
         .center-box button {
-            width: 100%;
+            width: 48%;
+            margin: 1%;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 14px;
+        }
+        .center-box button:hover {
+            background-color: #0056b3;
         }
         .captcha-img {
             display: block;
@@ -30,11 +50,11 @@
 <body>
     <div class="center-box">
         <form action="validate" method="post">
-            <label for="field1">Name:</label>
+            <label for="Name">Name:</label>
             <input type="text" id="Name" name="Name" required>
             
-            <label for="field2">Number:</label>
-            <input type="text" id="Number" name="Number" required>
+            <label for="Password">Password:</label>
+            <input type="text" id="Password" name="Password" required>
             
             <label for="captcha">Enter CAPTCHA:</label>
             <img src="captcha" alt="CAPTCHA Image" class="captcha-img"/>
