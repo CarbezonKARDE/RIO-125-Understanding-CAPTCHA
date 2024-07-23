@@ -48,7 +48,7 @@ This project demonstrates how to implement a CAPTCHA validation system in a Java
      ```
      http://localhost:8080/Captcha/index.jsp
      ```
-   -or
+     or
      ```
      http://localhost:8084/Captcha/index.jsp
      ```
